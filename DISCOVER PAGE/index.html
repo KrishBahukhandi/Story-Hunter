@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../Assests/IMAGES/WhatsApp Image 2024-09-01 at 09.44.10.jpeg">
+    <title>Story Hunter</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="main-header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">Story<span>Hunter</span></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="../LANDING PAGE/index.html">Home</a></li>
+                    <li><a href="#">Categories</a></li>
+                    <li><a href="../ABOUT US/index.html">About</a></li>
+                    <li><a href="../CONTACT US/index.html">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="search-bar">
+                        <input type="text" id="search-input" placeholder="Search stories...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <a href="#" class="btn login-btn sign-in-btn">Sign In</a>
+
+                </div>
+                <button class="hamburger" id="hamburger-btn"><i class="fa fa-bars"></i></button>
+            </nav>
+        </div>
+        <button id="theme-toggle">
+            <i id="theme-icon" class="fas fa-sun"></i> <!-- Sun icon for light mode -->
+        </button>
+        <div class="suggestions"></div> <!-- Added suggestions dropdown -->
+    </header>
+
+    <main>
+        <section class="discover">
+            <h1>Discover New Worlds</h1>
+            <div class="filter-options">
+                <button>All</button>
+                <button>Favorite</button>
+                <button>Recommended</button>
+                <button>Genres</button>
+                <button>Followers</button>
+                <button>Recent</button>
+            </div>
+            <div class="main-content">
+                <div class="main-story">
+                    <img src="../Assests/IMAGES/DISCOVER PAGE/castle.png" alt="Castle">
+                    <div class="story-overlay">
+                        <h2>Let's embark on an adventure</h2>
+                        <p>Explore captivating narratives and immerse yourself in thrilling stories.</p>
+                        <button>Start Reading</button>
+                    </div>
+                </div>
+                <div class="side-stories">
+                    <img src="../Assests/IMAGES/DISCOVER PAGE/landscape.png">
+                    <img src="../Assests/IMAGES/DISCOVER PAGE/Image (8).png">
+                </div>
+            </div>
+        </section>
+        <section class="collections">
+            <h2>Collections</h2>
+            <div class="slider-container">
+                <div class="collection-slider">
+                    <div class="collection-item">
+                        <img src="../Assests/IMAGES/DISCOVER PAGE/Image (9).png" alt="Image 1">
+                        <div class="collection-info">
+                            <h3>Dive into the story!</h3>
+                            <p>Adventure Awaits - 3 stories</p>
+                            <button><a href="../STORIES/STORY_1/index.html">Read</a></button>
+                        </div>
+                    </div>
+                    <div class="collection-item">
+                        <img src="../Assests/IMAGES/DISCOVER PAGE/Image (12).png" alt="Image 2">
+                        <div class="collection-info">
+                            <h3>Uncover the mystery!</h3>
+                            <p>Enchanted Tales - 3 stories</p>
+                            <button>Read</button>
+                        </div>
+                    </div>
+                    <div class="collection-item">
+                        <img src="../Assests/IMAGES/DISCOVER PAGE/Image (10).png" alt="Image 3">
+                        <div class="collection-info">
+                            <h3>Discover Magic!</h3>
+                            <p>Fantasy Lands - 3 stories</p>
+                            <button>Read</button>
+                        </div>
+                    </div>
+                    <div class="collection-item">
+                        <img src="../Assests/IMAGES/DISCOVER PAGE/Image (11).png" alt="Image 4">
+                        <div class="collection-info">
+                            <h3>Solve the puzzle!</h3>
+                            <p>Mystery Chronicles - 3 stories</p>
+                            <button>Read</button>
+                        </div>
+                    </div>
+                    <div class="collection-item">
+                        <img src="../Assests/IMAGES/DISCOVER PAGE/Image (13).png" alt="Image 5">
+                        <div class="collection-info">
+                            <h3>Epic Journeys!</h3>
+                            <p>Heroic Sagas - 3 stories</p>
+                            <button>Read</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-navigation">
+                <button id="prev">&#10094;</button>
+                <button id="next">&#10095;</button>
+            </div>
+        </section>
+    </main>
+    
+        <footer>
+            <div class="container">
+                <div class="footer-columns">
+                    <div class="footer-column">
+                        <h3>About Us</h3>
+                        <p>Story Hunter is a platform dedicated to bringing together readers and writers from around the globe. Our goal is to foster a love for storytelling and create a space where creativity thrives.</p>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="../LANDING PAGE/index.html">Home</a></li>
+                            <li><a href="../DISCOVER PAGE/index.html">Discover</a></li>
+                            <!-- <li><a href="#">Categories</a></li> -->
+                            <li><a href="#">Authors</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Follow Us</h3>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Subscribe</h3>
+                        <p>Get the latest stories delivered to your inbox.</p>
+                        <form class="subscribe-form">
+                            <input type="email" placeholder="Your Email">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Story Hunter. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    
+
+    <script src="script.js"></script>
+    <script src="../assests/global.js"></script>
+</body>
+</html>
