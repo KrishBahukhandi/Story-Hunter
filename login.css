@@ -1,0 +1,234 @@
+ body{
+    font-family: 'Roboto', sans-serif;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 350px;
+    text-align: center;
+    color: purple;
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: purple;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.form-container {
+    margin-top: 20px;
+}
+
+.form-toggle {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.form-toggle button {
+    background: none;
+    border: none;
+    color: purple;
+    font-size: 1rem;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.form-toggle button.active {
+    border-bottom: 2px solid #ffdd57;
+}
+
+.form-toggle button:hover {
+    color: #ffdd57;
+}
+
+.form-content {
+    display: none;
+}
+
+.form-content.active {
+    display: block;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: black;
+    font-size: 1rem;
+}
+
+.input-group input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.options .remember-me input {
+    margin-right: 5px;
+}
+
+.options .forgot-password {
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-decoration: underline;
+}
+
+.options .forgot-password:hover {
+    color: #ffdd57;
+}
+
+.login-button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #ffdd57;
+    color: #6e48aa;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-button:hover {
+    background: #ffe484;
+}
+
+/* General Modal Container Styles */
+/* .login-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    padding: 20px;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+} */ 
+
+/* Fullscreen Modal Background */
+/* .modal-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+} */
+
+/* Ensure the page underneath doesn't get affected */
+/* body.modal-active {
+    overflow: hidden; Prevent scrolling 
+} */
+
+/* Modal overlay to cover the entire page */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark backdrop */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it covers everything */
+}
+
+/* Modal content box */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* Close button */
+.close-login-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+/* Modal header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Modal body */
+.modal-body {
+    padding: 10px 0;
+}
+
+/* Form styles */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.login-button, .register-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ffdd57;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.login-button:hover, .register-button:hover {
+    background-color: #ffe484;
+}
