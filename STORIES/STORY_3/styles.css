@@ -59,18 +59,26 @@ body, html {
 }
 
 .back-btn {
-    position: absolute;
+    position: fixed;
     top: 20px;
     left: 20px;
-    padding: 10px 15px;
-    font-size: 1.5rem;
-    background-color: #444;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 1.2rem;
+    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    color: #ffdd57;
+    border: 2px solid #ffcc33;
+    border-radius: 50%;
     cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.3s;
+    z-index: 3; /* Ensures it stays on top */
 }
 
 .back-btn:hover {
-    background-color: #666;
+    transform: scale(1.1); /* Slightly enlarges on hover */
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out; /* Matches JavaScript timeout */
 }
