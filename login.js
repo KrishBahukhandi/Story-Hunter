@@ -30,10 +30,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const username = document.getElementById('username').value;
         const password = document.getElementById('password').value;
 
-        if (username && password) {
-            alert('Logging in...');
+        // Check if username and password match stored data
+        const storedUserData = JSON.parse(localStorage.getItem(username));
+        if (storedUserData && storedUserData.password === password) {
+            alert('Login successful!');
         } else {
-            alert('Please fill out all fields.');
+            alert('Incorrect username or password.');
         }
     });
 
@@ -48,7 +50,14 @@ document.addEventListener('DOMContentLoaded', function () {
         if (regPassword !== confirmPassword) {
             alert('Passwords do not match!');
         } else if (regUsername && regEmail && regPassword) {
-            alert('Signing up...');
+            // Store new user data in LocalStorage
+            const newUserData = {
+                username: regUsername,
+                email: regEmail,
+                password: regPassword
+            };
+            localStorage.setItem(regUsername, JSON.stringify(newUserData));
+            alert('Registration successful!');
         } else {
             alert('Please fill out all fields.');
         }
@@ -81,5 +90,46 @@ document.addEventListener('DOMContentLoaded', function () {
             modalContainer.remove();  // Remove the modal from DOM
             removeBlurBackground();  // Remove the blur effect
         });
+    }
+});
+
+// Handle login form submission
+loginForm.querySelector('form').addEventListener('submit', function (event) {
+    event.preventDefault();  // Prevent default form submission
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    // Check if username and password match stored data
+    const storedUserData = JSON.parse(localStorage.getItem(username));
+    if (storedUserData && storedUserData.password === password) {
+        alert('Login successful!');
+        window.location.href = 'LANDING PAGE/index.html'; // Redirect to the landing page
+    } else {
+        alert('Incorrect username or password.');
+    }
+});
+
+// Handle register form submission
+registerForm.querySelector('form').addEventListener('submit', function (event) {
+    event.preventDefault();  // Prevent default form submission
+    const regUsername = document.getElementById('regUsername').value;
+    const regEmail = document.getElementById('regEmail').value;
+    const regPassword = document.getElementById('regPassword').value;
+    const confirmPassword = document.getElementById('confirmPassword').value;
+
+    if (regPassword !== confirmPassword) {
+        alert('Passwords do not match!');
+    } else if (regUsername && regEmail && regPassword) {
+        // Store new user data in LocalStorage
+        const newUserData = {
+            username: regUsername,
+            email: regEmail,
+            password: regPassword
+        };
+        localStorage.setItem(regUsername, JSON.stringify(newUserData));
+        alert('Registration successful!');
+        window.location.href = 'LANDING PAGE/index.html'; // Redirect to the landing page after registration
+    } else {
+        alert('Please fill out all fields.');
     }
 });
