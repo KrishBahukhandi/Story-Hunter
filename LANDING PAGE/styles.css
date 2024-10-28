@@ -460,3 +460,36 @@ footer {
         margin-bottom: 0.5rem;
     }
 }
+/* Dark mode toggle button */
+#theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 24px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#theme-toggle:hover {
+    background-color: #e55a5a;
+}
+
+/* Light and dark mode styles */
+body.light-mode {
+    background-color: #fff;
+    color: #000;
+}
+
+body.light-mode #theme-toggle {
+    background-color: #ffd700;
+}
+
+body.light-mode .search-bar {
+    background-color: #fff;
+    color: #000;
+}
