@@ -24,10 +24,21 @@
                     <li><a href="../CONTACT US/index.html">Contact</a></li>
                 </ul>
                 <div class="nav-actions">
-                    <div class="search-bar">
-                        <input type="text" id="search-input" placeholder="Search stories...">
-                        <button><i class="fas fa-search"></i></button>
+                    <div class="search-bar-container">
+                        <div class="search-bar">
+                            <input type="text" id="search-input" placeholder="Search for stories...">
+                            <button id="clear-btn" class="clear-btn" aria-label="Clear search">
+                                <i class="fas fa-times"></i>
+                            </button>
+                            <button id="search-btn" class="search-btn" aria-label="Search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        <div class="suggestions" id="suggestions-box">
+                            <!-- Suggestions will be dynamically added here -->
+                        </div>
                     </div>
+                    
                     <a href="#" class="btn login-btn sign-in-btn">Sign In</a>
 
                 </div>
@@ -37,7 +48,7 @@
         <button id="theme-toggle">
             <i id="theme-icon" class="fas fa-sun"></i> <!-- Sun icon for light mode -->
         </button>
-        <div class="suggestions"></div> <!-- Added suggestions dropdown -->
+        <!-- <div class="suggestions"></div> -->
     </header>
 
     <main>

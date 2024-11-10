@@ -30,19 +30,19 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Search suggestions logic (Mockup)
-    const searchInput = document.getElementById('search-input');
-    const suggestionsBox = document.querySelector('.suggestions');
+    // const searchInput = document.getElementById('search-input');
+    // const suggestionsBox = document.querySelector('.suggestions');
 
-    searchInput.addEventListener('input', function () {
-        const searchValue = searchInput.value.trim();
+    // searchInput.addEventListener('input', function () {
+    //     const searchValue = searchInput.value.trim();
 
-        if (searchValue !== '') {
-            suggestionsBox.style.display = 'block';
-            suggestionsBox.innerHTML = '<p>Story suggestion 1</p><p>Story suggestion 2</p>'; // Mock data
-        } else {
-            suggestionsBox.style.display = 'none';
-        }
-    });
+    //     if (searchValue !== '') {
+    //         suggestionsBox.style.display = 'block';
+    //         suggestionsBox.innerHTML = '<p>Story suggestion 1</p><p>Story suggestion 2</p>'; // Mock data
+    //     } else {
+    //         suggestionsBox.style.display = 'none';
+    //     }
+    // });
 });
 
 document.addEventListener('DOMContentLoaded', function() {

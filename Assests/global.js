@@ -108,3 +108,51 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+const searchInput = document.getElementById('search-input');
+const suggestionsBox = document.getElementById('suggestions-box');
+const clearBtn = document.getElementById('clear-btn');
+
+// Mock data for suggestions with links
+const storySuggestions = [
+    { name: 'Story suggestion 1', url: '../STORIES/STORY_2/index.html' },
+    { name: 'Story suggestion 2', url: 'story2.html' },
+    { name: 'Adventure tales', url: 'adventure.html' },
+    { name: 'Mystery thriller', url: 'mystery.html' }
+];
+
+searchInput.addEventListener('input', function () {
+    const searchValue = searchInput.value.trim().toLowerCase();
+    suggestionsBox.innerHTML = ''; // Clear previous suggestions
+
+    if (searchValue) {
+        clearBtn.style.display = 'inline';
+        const filteredSuggestions = storySuggestions.filter(story => story.name.toLowerCase().includes(searchValue));
+        
+        // Generate and display suggestions
+        suggestionsBox.style.display = 'block';
+        filteredSuggestions.forEach(suggestion => {
+            const suggestionItem = document.createElement('p');
+            suggestionItem.textContent = suggestion.name;
+            suggestionItem.classList.add('suggestion-item');
+
+            // Add click event to open the URL when suggestion is clicked
+            suggestionItem.addEventListener('click', () => {
+                window.location.href = suggestion.url;  // Opens the story page
+            });
+
+            suggestionsBox.appendChild(suggestionItem);
+        });
+    } else {
+        suggestionsBox.style.display = 'none';
+        clearBtn.style.display = 'none';
+    }
+});
+
+// Clear input field and hide suggestions
+clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    suggestionsBox.style.display = 'none';
+    clearBtn.style.display = 'none';
+    searchInput.focus();
+});
