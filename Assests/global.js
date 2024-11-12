@@ -115,10 +115,10 @@ const clearBtn = document.getElementById('clear-btn');
 
 // Mock data for suggestions with links
 const storySuggestions = [
-    { name: 'Story suggestion 1', url: '../STORIES/STORY_2/index.html' },
-    { name: 'Story suggestion 2', url: 'story2.html' },
-    { name: 'Adventure tales', url: 'adventure.html' },
-    { name: 'Mystery thriller', url: 'mystery.html' }
+    { name: 'Funny Story', url: '../STORIES/STORY_7/index.html' },
+    { name: 'Horror Story', url: '../STORIES/STORY_10/index.html' },
+    { name: 'Adventure tales', url: '../STORIES/STORY_2/index.html' },
+    { name: 'Mystery thriller', url: '../STORIES/STORY_5/index.html' }
 ];
 
 searchInput.addEventListener('input', function () {
