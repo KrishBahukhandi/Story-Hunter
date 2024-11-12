@@ -6,6 +6,7 @@
     <title>Story Hunter</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="../Assests/global.css">
+    <link rel="stylesheet" href="../Assests/navbar.css">
     <link rel="icon" href="../assests/images/landing/WhatsApp Image 2024-09-01 at 09.44.10.jpeg">
     <link rel="icon" href="../Assests/IMAGES/WhatsApp Image 2024-09-01 at 09.44.10.jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,36 +15,44 @@
 </head>
 <body>
     
-    <header>
+    <header id="main-header">
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
-                    <a href="#">Story<span>Hunter</span></a>
+                    <a href="index.html">Story<span>Hunter</span></a>
                 </div>
                 <ul class="nav-links">
                     <li><a href="../LANDING PAGE/index.html">Home</a></li>
+                    <li><a href="#">Categories</a></li>
                     <li><a href="../DISCOVER PAGE/index.html">Discover</a></li>
-                     <li><a href="#">Authors</a></li> 
                     <li><a href="../CONTACT US/index.html">Contact</a></li>
-                    
                 </ul>
                 <div class="nav-actions">
-                    <div class="search-bar">
-                        <input type="text" placeholder="Search stories...">
-                        <button><i class="fas fa-search"></i></button>
+                    <div class="search-bar-container">
+                        <div class="search-bar">
+                            <input type="text" id="search-input" placeholder="Search for stories...">
+                            <button id="clear-btn" class="clear-btn" aria-label="Clear search">
+                                <i class="fas fa-times"></i>
+                            </button>
+                            <button id="search-btn" class="search-btn" aria-label="Search">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                        <div class="suggestions" id="suggestions-box">
+                            <!-- Suggestions will be dynamically added here -->
+                        </div>
                     </div>
-                    <a href="#" class="btn login-btn">Sign In</a>
+                    
+                    <a href="#" class="btn login-btn sign-in-btn">Sign In</a>
+
                 </div>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <button class="hamburger" id="hamburger-btn"><i class="fa fa-bars"></i></button>
             </nav>
         </div>
         <button id="theme-toggle">
-            <i id="theme-icon" class="fas fa-sun"></i> 
+            <i id="theme-icon" class="fas fa-sun"></i> <!-- Sun icon for light mode -->
         </button>
+        <!-- <div class="suggestions"></div> -->
     </header>
 
    
@@ -151,7 +160,7 @@
             </div>
         </div>
     </footer>
-    <script src="../Assests/global.css"></script>
+    <script src="../Assests/global.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

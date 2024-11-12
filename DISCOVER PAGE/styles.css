@@ -11,7 +11,7 @@ body {
     line-height: 1.6;
 }
 
-.container {
+/* .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
@@ -62,13 +62,14 @@ header {
     background-color: #333;
     color: #fff;
     transform: scale(1.1);
-}
+} */
 
-.nav-actions {
+/* .nav-actions {
     display: flex;
     align-items: center;
-    gap: 15px;
-}
+    gap: 10px; 
+    flex-wrap: nowrap; 
+} */
 
 /* .search-bar {
     display: flex;
@@ -95,16 +96,20 @@ header {
     font-size: 16px;
 } */
 
-.btn {
+/* .btn {
     display: inline-block;
-    padding: 8px 20px;
+    padding: 8px 25px;
     border-radius: 20px;
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
     transition: background 0.3s ease;
 }
-
+.btn.login-btn {
+    padding: 8px 15px; 
+    white-space: nowrap; 
+    display: inline-flex; 
+}
 .login-btn {
     background-color: #ff6b6b;
     color: #fff;
@@ -114,7 +119,6 @@ header {
     background-color: #e55a5a;
 }
 
-/* Hamburger Menu */
 .hamburger {
     display: none;
     background: none;
@@ -182,14 +186,13 @@ header {
     }
 }
 
-/* Sticky navigation color change on scroll */
 header.scrolled {
     background-color: #333;
     transition: background-color 0.3s ease;
-}
+} */
 
 /* Suggestions box under the search bar */
-.suggestions {
+/* .suggestions {
     position: absolute;
     background: #fff;
     color: #000;
@@ -208,7 +211,7 @@ header.scrolled {
 
 .suggestions p:hover {
     background-color: #f0f0f0;
-}
+} */
 
 /* Dark mode toggle button */
 #theme-toggle {
